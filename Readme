@@ -1,0 +1,18 @@
+Descrição do Código
+Este código implementa o controle de LEDs e um buzzer utilizando um microcontrolador Raspberry Pi Pico. Ele permite ao usuário, por meio de comandos digitados via terminal serial, acender LEDs de diferentes cores (vermelho, verde, azul e branco) ou ativar/desativar o buzzer. A estrutura principal do código é:
+
+Configuração de Hardware:
+
+Os LEDs estão conectados aos pinos GPIO 11, 12 e 13, e o buzzer ao pino GPIO 21.
+Cada dispositivo é configurado como saída.
+Funções Principais:
+
+init_ledsebuzz: Inicializa os pinos dos LEDs e do buzzer, garantindo que comecem desligados.
+set_led_color: Atualiza o estado dos LEDs e do buzzer com base no comando recebido do usuário.
+Loop Principal:
+
+O programa lê a entrada do usuário via terminal serial (scanf) e ajusta os dispositivos conforme o comando digitado. Comandos válidos:
+"vermelho", "verde", "azul", "branco": Acendem as cores correspondentes no LED.
+"buzzer": Ativa o buzzer.
+"desligar": Desliga todos os dispositivos.
+Comando não reconhecido exibe uma mensagem de erro.
