@@ -40,31 +40,37 @@ void set_led_color(const char *color) {
         green_led_state = 0;
         blue_led_state = 0;
         buzzer_state = 0;
+        printf("A cor escolhida foi o vermelho\n");
     } else if (strcmp(color, "verde") == 0) {
         red_led_state = 0;
         green_led_state = 1;
         blue_led_state = 0;
         buzzer_state = 0;
+                printf("A cor escolhida foi o verde\n");
     } else if (strcmp(color, "azul") == 0) {
         red_led_state = 0;
         green_led_state = 0;
         blue_led_state = 1;
         buzzer_state = 0;
+                printf("A cor escolhida foi o azul\n");
     } else if (strcmp(color, "branco") == 0) {
         red_led_state = 1;
         green_led_state = 1;
         blue_led_state = 1;
         buzzer_state = 0;
+        printf("A cor escolhida foi o branco\n");
     } else if (strcmp(color, "buzzer") == 0) {
         red_led_state = 0;
         green_led_state = 0;
         blue_led_state = 0;
         buzzer_state = 1;
+        printf("Ligou o buzzer\n");
     } else if (strcmp(color, "desligar") == 0) {
         red_led_state = 0;
         green_led_state = 0;
         blue_led_state = 0;
         buzzer_state = 0;
+        printf("desligou tudo\n");
     } else {
         printf("Comando não reconhecido.\n");
         return;
@@ -81,7 +87,7 @@ int main() {
     stdio_init_all(); // Inicializa o UART para comunicação
     init_ledsebuzz(); // Configura os pinos dos LEDs e buzzer
 
-    char color[16];
+    char color[16]; 
 
     while (1) {
         printf("Digite a cor do LED para acender (vermelho, verde, azul e branco), escreva buzzer para acionar o buzzer ou desligar para apagar tudo:\n");
@@ -89,5 +95,7 @@ int main() {
         set_led_color(color); // Ajusta o LED ou buzzer com base na entrada
     }
 
+
+//teste
     return 0;
 }
