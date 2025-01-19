@@ -16,3 +16,6 @@ O programa lê a entrada do usuário via terminal serial (scanf) e ajusta os dis
 "buzzer": Ativa o buzzer.
 "desligar": Desliga todos os dispositivos.
 Comando não reconhecido exibe uma mensagem de erro.
+
+O vídeo demonstrando o funcionamento pode ser visto no link abaixo:
+https://youtu.be/t30fWyRgOMM
